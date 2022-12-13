@@ -1,0 +1,19 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Welcome to the rock paper scissors GAME");
+        Scanner sc = new Scanner(System.in);
+        System.out.print("1- ROCK \n2- PAPER \n3- SCISSORS\n:");
+        int userInput = sc.nextInt();
+        Random random = new Random();
+        int computerInput = random.nextInt();
+        if (userInput == computerInput){
+            System.out.println("***---DRAW---***");
+        } else if (userInput == 1 && computerInput == 3 || userInput == 2 && computerInput == 1 || userInput == 3 && computerInput == 2) {
+            System.out.println("***---YOU WIN---***");
+        } else
+            System.out.println("***---COMPUTER WIN---***");
+    }
+}
